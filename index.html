@@ -8,56 +8,66 @@
       <div class="checkbox">
         <label>
           <input type="checkbox" value="Blood_Glucose" />
-          <div><span>Blood Glucose</span></div>
+          <div class="ck-container">
+            <span class="ck-text">Blood Glucose</span>
+          </div>
         </label>
       </div>
 
       <div class="checkbox">
         <label>
           <input type="checkbox" value="medication" />
-          <div><span>Medication </span></div>
+          <div class="ck-container">
+            <span class="ck-text">Medication </span>
+          </div>
         </label>
       </div>
 
       <div class="checkbox">
         <label>
           <input type="checkbox" value="food_tracking" />
-          <div><span>Food Tracking</span></div>
+          <div class="ck-container">
+            <span class="ck-text">Food Tracking</span>
+          </div>
         </label>
       </div>
 
       <div class="checkbox">
         <label>
           <input type="checkbox" value="Exercise" />
-          <div><span>Exercise</span></div>
+          <div class="ck-container"><span class="ck-text">Exercise</span></div>
         </label>
       </div>
 
       <div class="checkbox">
         <label>
           <input type="checkbox" value="weight" />
-          <div><span>Weight Management</span></div>
+          <div class="ck-container">
+            <span class="ck-text">Weight Management</span>
+          </div>
         </label>
       </div>
 
       <div class="checkbox">
         <label>
           <input type="checkbox" value="weight" />
-          <div><span>Blood Pressure</span></div>
+          <div class="ck-container">
+            <span class="ck-text">Blood Pressure</span>
+          </div>
         </label>
       </div>
 
       <div class="checkbox">
         <label>
           <input type="checkbox" value="weight" />
-          <div><span>A1C</span></div>
+          <div class="ck-container"><span class="ck-text">A1C</span></div>
         </label>
       </div>
     </div>
   </main>
   <style>
     html {
-      font-size: 28px;
+      font-size: 36px;
     }
     body {
       font-family: Helvetica, sans-serif;
@@ -102,17 +112,17 @@
     }
 
     .checkbox label,
-    .checkbox div {
+    .checkbox .ck-container {
       width: 100%;
       height: calc(100% - 3px);
     }
 
     .checkbox,
-    .checkbox label div {
+    .checkbox label .ck-container {
       border-radius: 0.25rem;
     }
 
-    .checkbox label div {
+    .checkbox label .ck-container {
       text-align: center;
       padding: 3px 0px;
       display: block;
@@ -120,13 +130,15 @@
       position: relative;
     }
 
-    .checkbox span {
+    .checkbox .ck-text {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       width: 100%;
       left: 0;
-      padding: 0.5rem 0;
+      padding: 1rem;
+      box-sizing: border-box;
+      cursor: pointer;
     }
 
     .checkbox label input {
@@ -134,16 +146,16 @@
       top: -20px;
     }
 
-    .checkbox input:hover + div {
+    .checkbox input:hover + .ck-container {
       background-color: #e4e9ef;
     }
 
-    .checkbox input:checked + div {
+    .checkbox input:checked + .ck-container {
       background-color: #424fa5;
       color: #fff;
     }
 
-    .checkbox input:checked:hover + div {
+    .checkbox input:checked:hover + .ck-container {
       background-color: #303a75;
       color: #fff;
     }
